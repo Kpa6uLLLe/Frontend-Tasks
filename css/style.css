@@ -1,0 +1,86 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+li{
+  list-style: none;
+}
+.task1{
+  font-family: 'Lato', sans-serif;
+	margin-top: 48px;
+	margin-bottom: 32px;
+}
+
+h2{
+  color: #283F75;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -0.34px;
+}
+
+.container{
+  max-width: 1140px;
+  padding: 0 15px;
+  margin:0 auto;
+}
+
+.task1 li{
+  display: inline-grid;
+}
+
+.task1__inner{
+
+}
+
+.task1 p{
+	margin-top: 30px;
+}
+
+.task1__inner__text{
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+	margin-right: 35px;
+	width: 540px;
+}
+
+.task1__inner__accordion{
+	color: var(--blue-heading, #283F75);
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 140%;
+	width: 560px;
+}
+.accordion_button{
+	border: 1px solid var(--outline, #C6CDDA);
+	background: var(--white, #FFF);
+	width: 530px;
+	padding: 20px 0px 20px 30px;
+	margin-bottom: 20px
+
+}
+
+.accordion_content{
+max-height: 0;
+overflow: hidden;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+transition: 0.33s ease;
+}
+
+.arrow{
+	background: url('../img/Down.svg');
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin-top: -13px;
+	margin-left: 490px;
+	position: absolute;
+}
