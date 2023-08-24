@@ -1,3 +1,33 @@
+@font-face {
+font-family: 'Proxima Nova';
+src: url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+		url('../fonts/ProximaNova-Regular.woff') format('woff');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: 'Proxima Nova';
+src: url('../fonts/ProximaNova-Bold.ttf') format('truetype'),
+		url('../fonts/ProximaNova-Bold.woff') format('woff');
+font-weight: 700;
+font-style: normal;
+}
+@font-face {
+font-family: 'Proxima Nova';
+src: url('../fonts/ProximaNova-Semibold.ttf') format('truetype'),
+		url('../fonts/ProximaNova-Semibold.woff') format('woff');
+font-weight: 600;
+font-style: normal;
+}
+@font-face {
+    font-family: "Parangon530C";
+    src: url("../fonts/Parangon530C/Parangon530C.eot");
+    src: url("../fonts/Parangon530C/Parangon530C.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Parangon530C/Parangon530C.woff") format("woff"),
+    url("../fonts/Parangon530C/Parangon530C.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 * {
 	padding: 0px;
 	margin: 0px;
@@ -83,4 +113,186 @@ transition: 0.33s ease;
 	margin-top: -13px;
 	margin-left: 490px;
 	position: absolute;
+}
+
+.task2{
+	margin: 57px 0px 54px 0px;
+	font-family: 'Proxima Nova', sans-serif;;
+}
+
+.task2_inner{
+	width: 978px;
+}
+
+.task2_item{
+	width: 290px;
+	height: 436px;
+	display: inline-block;
+	margin-right: 33px;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.item_picture{
+	height: 290px;
+	width: 290px;
+	background: url('../img/Grey_Chair.png');
+	transition: 1s ease;
+}
+
+.item_info{
+	height: 146px;
+	background: #EFF5F5;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.item_picture:hover{
+	height: 290px;
+	width: 290px;
+	background: url('../img/Colored_Chair.png');
+}
+
+.item_category{
+	color: #6E6659;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: normal;
+	padding-top: 15px;
+	margin-bottom: 10px;
+}
+
+.item_name{
+	color: #264E58;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: normal;
+	margin-bottom: 10px;
+}
+
+.item_article{
+	color: #A5A5A5;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: normal;
+	margin-bottom: 10px;
+}
+
+.article_numbers{
+	display: inline;
+	color: #264E58;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.price_numbers{
+	display: inline;
+	color: #6E6659;
+	font-family: Proxima Nova;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.item_mod_discount{
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	height: 14px;
+	width: 54px;
+	background: #E0CD1C;
+	color: #FFF;
+	font-family: 'Parangon 530C';
+	font-size: 8px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 3px;
+}
+
+.item_mod_new{
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	height: 14px;
+	width: 67px;
+	background: #087A28;
+	color: #FFF;
+	font-family: 'Parangon 530C';
+	font-size: 8px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 3px;
+}
+
+.item_mod_hot{
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	height: 14px;
+	width: 81px;
+	background: #A32018;
+	color: #FFF;
+	font-family: 'Parangon 530C';
+	font-size: 8px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 3px;
+}
+
+.new_icon{
+	background: url('../img/rocket.svg');
+	width: 7px;
+	height: 7px;
+	display: inline-block;
+}
+
+.hot_icon{
+	background: url('../img/star.svg');
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+}
+
+.discount_icon{
+	background: url('../img/discount.svg');
+	width: 7px;
+	height: 8px;
+	display: inline-block;
+}
+
+.item_mod_instock{
+	position: absolute;
+	top: 266px;
+	left: 220px;
+	height: 14px;
+	width: 60px;
+	font-family: Proxima Nova;
+	font-size: 8px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: center;
+	background: #FFF;
+}
+
+.instock_icon{
+	position: relative;
+	background: url('../img/check-mark.svg');
+	width: 9px;
+	height: 9px;
+	display: inline-block;
 }
