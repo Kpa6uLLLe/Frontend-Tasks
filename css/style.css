@@ -20,13 +20,32 @@ font-weight: 600;
 font-style: normal;
 }
 @font-face {
-    font-family: "Parangon530C";
+    font-family: 'Parangon530C';
     src: url("../fonts/Parangon530C/Parangon530C.eot");
     src: url("../fonts/Parangon530C/Parangon530C.eot?#iefix")format("embedded-opentype"),
     url("../fonts/Parangon530C/Parangon530C.woff") format("woff"),
     url("../fonts/Parangon530C/Parangon530C.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
+}
+@font-face {
+    font-family: 'Arial';
+		src: url('../fonts/ArialMT.ttf') format('truetype'),
+				url('../fonts/ArialMT.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Gotham Pro';
+		src: url('../fonts/gothampro_bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Gotham Pro';
+		src: url('../fonts/gothampro.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
 }
 * {
 	padding: 0px;
@@ -295,4 +314,120 @@ transition: 0.33s ease;
 	width: 9px;
 	height: 9px;
 	display: inline-block;
+}
+
+.task4{
+	background: url('../img/task4_bg.png');
+	width: 1360px;
+	padding-top: 210px;
+	margin: 0 auto;
+	padding-bottom: 185px;
+}
+
+
+.task4_inner{
+	font-family: 'Gotham Pro';
+	color: #FFF;
+}
+
+.title{
+	font-size: 70px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 105%;
+	letter-spacing: -2.1px;
+}
+
+.aftertitle{
+	margin-left: 6px;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+}
+
+.fields{
+	margin-top: 20px;
+	font-size: 0px;
+}
+
+.input-box{
+	border: 1px solid #FFF;
+	background: rgba(255, 255, 255, 0.15);
+	font-family: 'Gotham Pro';
+	color:#FFF;
+	height: 50px;
+	width: 340px;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+	padding-left: 30px;
+	position: relative;
+	display: inline-block;
+}
+
+.text_field_flag{
+	display: inline-block;
+	position: relative;
+	margin-left: 40px;
+	margin-right: 40px;
+
+}
+
+.text_field_flag::before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	width: 25px;
+	height: 18px;
+	top: 16px;
+	left: 17px;
+	background: url('../img/russian_flag.png');
+	border: 1px solid #C0C0C0;
+}
+.text_field_with_icon{
+	color: #FFF;
+	font-family: Arial;
+	font-size: 16px;
+	padding-left: 53px;
+}
+::-webkit-input-placeholder {color:#FFF;}
+::-moz-placeholder          {color:#FFF;}
+:-moz-placeholder           {color:#FFF;}
+:-ms-input-placeholder      {color:#FFF;}
+
+.form_bot_row{
+	margin-top: 35px;
+}
+
+.agreement{
+	width: 720px;
+	color: #FFF;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	display: inline-block;
+}
+
+.agreement a{
+	color: #EB7979;
+	font-family: 'Gotham Pro';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	text-decoration-line: underline;
+}
+
+.form__button{
+	position: absolute;
+	margin-left: 42px;
+	width: 339px;
+	padding: 13px 84px;
+	color: #000;
+	font-family: 'Gotham Pro';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
 }
