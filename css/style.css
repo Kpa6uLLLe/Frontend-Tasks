@@ -317,6 +317,12 @@ transition: 0.33s ease;
 }
 
 .task4{
+	background: rgba(77, 23, 24, 1);
+
+	width: 1360px;
+	margin: 0 auto;
+}
+.task4_bg{
 	background: url('../img/task4_bg.png');
 	width: 1360px;
 	padding-top: 210px;
@@ -383,6 +389,7 @@ transition: 0.33s ease;
 	height: 18px;
 	top: 16px;
 	left: 17px;
+	background: red;
 	background: url('../img/russian_flag.png');
 	border: 1px solid #C0C0C0;
 }
