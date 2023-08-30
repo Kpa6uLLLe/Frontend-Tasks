@@ -123,7 +123,7 @@ const backgroundColorCountries = ['rgb(187, 35, 44)', 'rgb(240, 161, 33)', 'rgb(
 document.querySelectorAll('.countries').forEach((legend) => {
   let innerHtml = "";
   countries.forEach((country) => {
-    innerHtml += '<div class="legend_line"><div class="legend_point"></div>-  ' + country + "</div>";
+    innerHtml += '<div class="legend_line"><div class="legend_point"></div>-   ' + country + "</div>";
   });
   legend.innerHTML = innerHtml;
 });

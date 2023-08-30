@@ -112,11 +112,13 @@ h2{
 }
 
 .task1 li{
-  display: inline-grid;
+  display: inline-block;
+	vertical-align: top;
+	position: relative;
 }
 
 .task1__inner{
-
+	width: 1140px;
 }
 
 .task1 p{
@@ -176,6 +178,7 @@ transition: 0.33s ease;
 
 .task2_inner{
 	width: 978px;
+	margin: auto;
 }
 
 .task2_item{
@@ -475,11 +478,23 @@ transition: 0.33s ease;
 }
 
 .task5_inner{
+	width: 1140px;
 	margin-top: 53px;
 	font-family: 'Commissioner';
 	margin-bottom: 53px;
 }
+.sales_block{
+	display: inline-block;
+	margin-right: 30px;
+}
 
+.sales :last-child{
+	margin-right: 0px;
+}
+
+.sales_block :last-child{
+	margin-right: 0px;
+}
 .donut{
 	width: 220px;
 	padding-right: 10px;
@@ -621,8 +636,8 @@ transition: 0.33s ease;
 	line-height: 100%;
 	letter-spacing: -0.48px;
 	color: #A7A7A7;
-	margin-right: : 100px;
-	padding-right: 10px;
+	white-space: pre;
+	padding-right: 10px !important;
 	margin-bottom: 14px;
 }
 
@@ -636,7 +651,7 @@ transition: 0.33s ease;
 	width: 11px;
 	height: 11px;
 	border-radius: 100px;
-	margin-right: 7px;
+	margin-right: 7px !important;
 	background: #E83D46;
 }
 
@@ -677,14 +692,7 @@ transition: 0.33s ease;
 	background: #E4DFD5;
 }
 
-.sales_block{
-	display: inline-block;
-	margin-right: 30px;
-}
 
-.sales_block :last-child{
-	margin-right: 0px;
-}
 
 .graph__title{
 	color: #A7A7A7;
