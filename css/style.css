@@ -20,6 +20,41 @@ font-weight: 600;
 font-style: normal;
 }
 @font-face {
+font-family: 'Mail Sans Roman';
+src: url('../fonts/MailSansRoman-DemiBold.ttf') format('truetype'),
+		url('../fonts/MailSansRoman-DemiBold.woff') format('woff');
+font-weight: 600;
+font-style: normal;
+}
+@font-face {
+font-family: 'Mail Sans Roman';
+src: url('../fonts/MailSansRoman-Regular.ttf') format('truetype'),
+		url('../fonts/MailSansRoman-Regular.woff') format('woff');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: 'Commissioner';
+src: url('../fonts/Commissioner-Regular.ttf') format('truetype'),
+		url('../fonts/Commissioner-Regular.woff') format('woff');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: 'Commissioner';
+src: url('../fonts/Commissioner-Medium.ttf') format('truetype'),
+		url('../fonts/Commissioner-Medium.woff') format('woff');
+font-weight: 500;
+font-style: normal;
+}
+@font-face {
+font-family: 'Commissioner';
+src: url('../fonts/Commissioner-SemiBold.ttf') format('truetype'),
+		url('../fonts/Commissioner-SemiBold.woff') format('woff');
+font-weight: 600;
+font-style: normal;
+}
+@font-face {
     font-family: 'Parangon530C';
     src: url("../fonts/Parangon530C/Parangon530C.eot");
     src: url("../fonts/Parangon530C/Parangon530C.eot?#iefix")format("embedded-opentype"),
@@ -437,4 +472,235 @@ transition: 0.33s ease;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 150%;
+}
+
+.task5_inner{
+	margin-top: 53px;
+	font-family: 'Commissioner';
+	margin-bottom: 53px;
+}
+
+.donut{
+	width: 220px;
+	padding-right: 10px;
+	padding-left: 10px;
+	min-height: 300px;
+	height: 330px;
+	overflow: visible;
+	position: relative;
+	display: inline-block;
+}
+.graph{
+	z-index: 999;
+	position: relative;
+}
+
+.graph:hover{
+	cursor: url('../img/chart_pointer.svg') 16 16, auto;
+}
+
+.switch{
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 155%;
+	color: #A7A7A7;
+	vertical-align: middle;
+	padding-top: 5px;
+}
+
+.switch-btn {
+  display: inline-block;
+  width: 33px;
+  height: 20px;
+  border-radius: 19px;
+  background: #E83D46;
+  z-index: 0;
+  margin: 0 13px 0 13px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 300ms;
+	vertical-align: middle;
+}
+.switch-btn::after {
+  content: "";
+  height: 13px;
+  width: 13px;
+  border-radius: 17px;
+  background: #F9A620;
+  top: 3px;
+  left: 3px;
+  transition-duration: 300ms;
+  position: absolute;
+  z-index: 1;
+}
+.switch-on {
+  background: #005FA7;
+}
+.switch-on::after {
+  left: 16px;
+}
+
+.switch-text-on{
+	color: #626262;
+}
+
+.switch-text{
+	display: inline-block;
+}
+
+.tooltip{
+	cursor: url('../img/chart_pointer.svg') 16 16, auto;
+	display: inline-block;
+	top: 105px;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: #262424;
+	max-height: 79px;
+	font-family: 'Mail Sans Roman';
+	position: absolute;
+	z-index: 0;
+}
+
+.tooltip-amount{
+	font-size: 38px;
+	font-weight: 600;
+	line-height: 155%;
+	text-align: center;
+}
+
+.tooltip-measure{
+	display: inline-block;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 155%;
+	text-align: center;
+	margin-top: -24px;
+}
+
+.dollar{
+	color:#262424;
+	text-align: center;
+	font-family: 'Commissioner';
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 120%;
+}
+
+
+.dollar::before{
+	content: '$';
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.legend{
+	width: 220px;
+	display: block;
+	text-align: left;
+	margin-left: 10px;
+	overflow: visible;
+	margin-top: 25px;
+}
+
+.legend_line{
+	font-family: 'Mail Sans Roman';
+	font-size: 12px;
+	font-style: normal;
+	width: 95px;
+	height: 12px;
+	font-weight: 400;
+	line-height: 100%;
+	letter-spacing: -0.48px;
+	color: #A7A7A7;
+	margin-right: : 100px;
+	padding-right: 10px;
+	margin-bottom: 14px;
+}
+
+.cities .legend_line{
+	display: inline-block;
+}
+
+.legend_point{
+	content: '';
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	border-radius: 100px;
+	margin-right: 7px;
+	background: #E83D46;
+}
+
+.legend_highlighted{
+	color: #626262;
+	font-family: 'Mail Sans Roman';
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 100%;
+	letter-spacing: -0.48px;
+}
+
+.sales__title{
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 155%;
+	color: #262424;
+	display: block;
+}
+
+.group_title{
+	color: #626262;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 155%;
+	position: relative;
+	overflow: hidden;
+}
+
+.group_title::after{
+	content: '';
+	height: 1px;
+	display: inline-block;
+	width: 100%;
+	position: absolute;
+	top: 12px;
+	margin-left: 13px;
+	background: #E4DFD5;
+}
+
+.sales_block{
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.sales_block :last-child{
+	margin-right: 0px;
+}
+
+.graph__title{
+	color: #A7A7A7;
+	font-family: 'Mail Sans Roman';
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 155%;
+	margin-left: 10px;
+}
+
+.graph__card{
+	width: 240px;
+	height: 360px;
+	display: inline-block;
+	margin-right: 30px;
+	margin-top: 25px;
+	padding-top: 18px;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.07);
 }

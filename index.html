@@ -461,6 +461,75 @@
 		</div>
 	</div>
 </section>
+<section class = "task5">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<div class="container">
+		<div class="task5_inner">
+			<div class="switch">
+				<div class="switch-text switch-text-on">Предыдущий период</div>
+				<div class="switch-btn"></div>
+				<div class="switch-text">План</div>
+			</div>
+			<div class="sales">
+				<div class="sales__title">Продажи</div>
+				<div class="sales_amount sales_block">
+					<div class="group_title">Количество проданных пицц</div>
+					<div class="graphs">
+						<div class="graph__card">
+							<div class="donut">
+								<div class="graph__title">Страны</div>
+								<canvas class="graph"></canvas>
+								<div class="tooltip">
+									<div class="tooltip-amount"></div><br>
+									<div class="tooltip-measure">шт.</div>
+								</div>
+								<div class="legend countries"></div>
+							</div>
+						</div>
+						<div class="graph__card">
+							<div class="donut">
+								<div class="graph__title">Города</div>
+								<canvas class="graph"></canvas>
+								<div class="tooltip">
+									<div class="tooltip-amount"></div><br>
+									<div class="tooltip-measure">шт.</div>
+								</div>
+								<div class="legend cities"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sales_profit sales_block">
+					<div class="group_title">Выручка</div>
+					<div class="graphs">
+						<div class="graph__card">
+							<div class="donut">
+								<div class="graph__title">Страны</div>
+				  			<canvas class="graph"></canvas>
+								<div class="tooltip">
+									<div class="tooltip-amount dollar"></div><br>
+									<div class="tooltip-measure">млн.</div>
+								</div>
+								<div class="legend countries"></div>
+							</div>
+						</div>
+						<div class="graph__card">
+							<div class="donut">
+								<div class="graph__title">Города</div>
+								<canvas class="graph"></canvas>
+								<div class="tooltip">
+									<div class="tooltip-amount dollar"></div><br>
+									<div class="tooltip-measure">млн.</div>
+								</div>
+								<div class="legend cities"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <script defer language="JavaScript" type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

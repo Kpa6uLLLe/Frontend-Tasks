@@ -9,34 +9,52 @@ require 'PHPMailer/src/Exception.php';
 $name = test_input($_POST['name']);
 $tel = test_input($_POST['tel']);
 $email = test_input($_POST['email']);
+$config = include('config.php');
+$username = $config['username'];
+$password = $config['password'];
 
-$mail = new PHPMailer();
-$mail->CharSet = 'UTF-8';
+send_mail(
+  $username,
+  "<html><body>
+                  <h1>Имя: $name</h1>
+                  <p>Телефон: $tel</p>
+                  <p>Эл.Почта: $email</p>
+                  </html></body>",
+  "$name оставил(а) заявку на сайте"
+);
 
-// Создаем письмо
-$mail = new PHPMailer();
-$mail->isSMTP();                   // Отправка через SMTP
-$mail->Host   = 'smtp.yandex.ru';  // Адрес SMTP сервера
-$mail->SMTPAuth   = true;
-$mail->Username   = '******';       //имя пользователя (без домена и @)
-$mail->Password   = '******';    // ваш пароль(пароль для stmp в яндексе, https://id.yandex.ru/security/app-passwords)
-$mail->SMTPSecure = 'ssl';
-$mail->Port   = 465;
+send_mail(
+  $email,
+  "<html><body>
+                  <h3>Благодарим вас за вашу заявку</h3>
+                  <p>Мы приступили к её обработке, наши специалисты в скором времени свяжутся с вами.</p>
+                  <p>Спасибо!</p>
+                  </html></body>",
+  "Вы оставили заявку на сайте mydomain.com"
+);
+   //(пароль для stmp в яндексе: https://id.yandex.ru/security/app-passwords)
 
-$mail->setFrom('******', 'noreply@mydomain.com');
-$mail->addAddress('******', '');
 
-$mail->Subject = "$name оставил(а) заявку на сайте"; //тема
-$mail->msgHTML("<html><body>
-                <h1>Имя: $name</h1>
-                <p>Телефон: $tel</p>
-                <p>Эл.Почта: $email</p>
-                </html></body>");
-// Отправляем
-if ($mail->send()) {
-  echo 'Письмо отправлено!';
-} else {
-  echo 'Ошибка: ' . $mail->ErrorInfo;
+
+function send_mail ($targetMail, $msgHTML, $subject) {
+  global $username, $password, $name;
+  $mail = new PHPMailer();
+  $mail->CharSet = 'UTF-8';
+  $mail->isSMTP();
+  $mail->Host   = 'smtp.yandex.ru';
+  $mail->SMTPAuth   = true;
+  $mail->Username   = $username;
+  $mail->Password   = $password;
+  $mail->SMTPSecure = 'ssl';
+  $mail->Port   = 465;
+  $mail->setFrom($username, 'noreply@mydomain.com');
+  $mail->addAddress($targetMail, $name);
+  $mail->Subject = $subject;
+  $mail->msgHTML($msgHTML);
+  if (!$mail->send()) {
+    echo 'Ошибка: ' . $mail->ErrorInfo;
+  }
+  return;
 }
 function test_input($data) {
     $data = trim($data);
