@@ -147,7 +147,6 @@ document.querySelectorAll('.cities').forEach((legend) => {
 const totalCounter = {
   id: 'totalCounter',
   afterUpdate(chart, args, options) {
-    console.log(chart);
     total = 0;
     chart.getDatasetMeta(0).data.forEach((item) => {
       total += item.$context.parsed;
